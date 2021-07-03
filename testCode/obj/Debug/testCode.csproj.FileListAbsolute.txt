@@ -1,0 +1,7 @@
+C:\Users\ferds\Source\Repos\ferdswa\fictional-carnival\testCode\obj\Debug\testCode.csprojAssemblyReference.cache
+C:\Users\ferds\Source\Repos\ferdswa\fictional-carnival\testCode\obj\Debug\testCode.csproj.CoreCompileInputs.cache
+C:\Users\ferds\Source\Repos\ferdswa\fictional-carnival\testCode\bin\Debug\testCode.exe.config
+C:\Users\ferds\Source\Repos\ferdswa\fictional-carnival\testCode\bin\Debug\testCode.exe
+C:\Users\ferds\Source\Repos\ferdswa\fictional-carnival\testCode\bin\Debug\testCode.pdb
+C:\Users\ferds\Source\Repos\ferdswa\fictional-carnival\testCode\obj\Debug\testCode.exe
+C:\Users\ferds\Source\Repos\ferdswa\fictional-carnival\testCode\obj\Debug\testCode.pdb
