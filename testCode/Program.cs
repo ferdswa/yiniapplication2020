@@ -60,8 +60,8 @@ namespace testCode
         {
             //Clear console window - for aesthetic reasons only
             //declare variables
-            string studentID, combinedScores, currentScore;
-            double matScore, engScore, sciScore, avgScore;
+            string studentID = "", combinedScores = "", currentScore = "";
+            double matScore = 0, engScore = 0 , sciScore = 0, avgScore = 0;
             Console.WriteLine("Enter student's ID: ");
             studentID = Console.ReadLine();
             Console.WriteLine("Enter the student with ID " + studentID + "'s Maths, English and Science scores in that order, separated by commas.\n\n");
