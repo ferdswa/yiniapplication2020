@@ -76,11 +76,12 @@ namespace testCode
                 getInfoTask1();
             }
 
-            for (int i = 0; i < combinedScores.Length; i++)
+            int i = 0;
+            foreach(string x in scoreArray)//remove any spaces before converting to numbers
             {
-                if (scoreArray[i].Contains(' '))
+                if (x.Contains(' '))
                 {
-                    currentScore = scoreArray[i];
+                    currentScore = x;
                     foreach (char h in currentScore)
                     {
                         if (h == ' ')
@@ -88,7 +89,9 @@ namespace testCode
                     }
                     scoreArray[i] = currentScore;
                 }
+                i++;
             }
+
             matScore = Int32.Parse(scoreArray[0]);
             engScore = Int32.Parse(scoreArray[1]);
             sciScore = Int32.Parse(scoreArray[2]);
