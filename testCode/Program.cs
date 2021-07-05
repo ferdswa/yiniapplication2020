@@ -75,21 +75,12 @@ namespace testCode
                 Console.WriteLine("Make sure to enter 3 scores");
                 getInfoTask1();
             }
-
-            int i = 0;
             foreach(string x in scoreArray)//remove any spaces before converting to numbers
             {
                 if (x.Contains(' '))
                 {
-                    currentScore = x;
-                    foreach (char h in currentScore)
-                    {
-                        if (h == ' ')
-                            currentScore.Remove(h);
-                    }
-                    scoreArray[i] = currentScore;
+                    x.Trim();
                 }
-                i++;
             }
 
             matScore = Int32.Parse(scoreArray[0]);
