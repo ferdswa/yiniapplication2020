@@ -158,9 +158,12 @@ namespace testCode
             }
             return scores;
         }
-        static double calculateProgressScore(double[] scoreSet)
+        static double calculateProgressScore(double[] scoreSet)//Calculate progress score
         {
-            return 0;
+            double progressScore, difference;
+            difference = (scoreSet[1]-scoreSet[0]);//Actual - mock result
+            progressScore = (difference/10);
+            return progressScore;
         }
         static double calculateAvgPScore(double m, double e, double s)
         {
