@@ -102,7 +102,19 @@ namespace testCode
     {
         public static void getInfoTask2()
         {
-            //to get: mock & actual results for each of the three subjects.
+            //variables
+            string studentID = "";
+            double[] matScores,engScores,sciScores = new double[1];
+            Console.WriteLine("Enter the student's ID");
+            studentID=Console.ReadLine();
+
+            Console.WriteLine("Enter the student's Maths scores, mock first and actual second, separated by a comma");
+            string rawMaths = Console.ReadLine();
+            matScores=GetScores(rawMaths);
+        }
+        static double[] GetScores(string rawValues)
+        {
+            return;
         }
         static double calculateProgressScore()
         {
