@@ -111,6 +111,7 @@ namespace testCode
             //variables
             string studentID = "";
             double[] matScores,engScores,sciScores = new double[1];
+            double progressMaths, progressEnglish, progressScience, progressAverage;
             Console.WriteLine("Enter the student's ID");
             studentID=Console.ReadLine();
 
@@ -126,6 +127,13 @@ namespace testCode
                 Console.WriteLine("Enter the student's Science scores, mock first and actual second, separated by a comma");
                 string rawScience = Console.ReadLine();
                 sciScores=GetScores(rawScience);
+
+                //Calculate progress scores from score sets
+                progressMaths = calculateProgressScore(matScores);
+                progressEnglish = calculateProgressScore(engScores);
+                progressScience = calculateProgressScore(sciScores);
+                //Calculate average progress score
+                progressAverage = calculateAvgPScore(progressMaths,progressEnglish,progressScience);
             }
             catch
             {
@@ -150,11 +158,11 @@ namespace testCode
             }
             return scores;
         }
-        static double calculateProgressScore()
+        static double calculateProgressScore(double[] scoreSet)
         {
             return 0;
         }
-        static double calculateAvgPScore()
+        static double calculateAvgPScore(double m, double e, double s)
         {
             return 0;
         }
