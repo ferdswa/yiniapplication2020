@@ -8,7 +8,7 @@ namespace testCode
 {
     class Program
     {
-        static void Main()//entrypoint
+        public static void Main()//entrypoint
         {
             //Ask user is they want to add new student info, if yes proceed if no safe exit
 
@@ -22,7 +22,7 @@ namespace testCode
             {
                 case "Y":
                     Console.Clear();
-                    Console.WriteLine("Enter which type of operation you want to perform:\nTask1\nTask2\n\nEnter the number of the task:");
+                    Console.WriteLine("Enter which type of operation you want to perform:\n1) Calculate average score\n2) Calculate progress score\n\nEnter the number of the task:");
                     int taskOption = Int32.Parse(Console.ReadLine());
                     switch (taskOption)
                     {
@@ -83,14 +83,22 @@ namespace testCode
                 }
             }
 
-            matScore = Int32.Parse(scoreArray[0]);
-            engScore = Int32.Parse(scoreArray[1]);
-            sciScore = Int32.Parse(scoreArray[2]);
+            matScore = double.Parse(scoreArray[0]);
+            engScore = double.Parse(scoreArray[1]);
+            sciScore = double.Parse(scoreArray[2]);
             avgScore = averageScore(matScore, engScore, sciScore);
+            Console.Clear();
+            //outputs the subject scores and average score
+            Console.WriteLine("Student "+studentID+"'s scores are as following: \nMaths: "+matScore+"%\nEnglish: "+engScore+"%\nScience: "+sciScore+"%\nGiving them an average score of "+avgScore+"%");
+            Console.WriteLine("Press [ENTER] to go back to the task selection menu");
+            Console.ReadLine();
+            Program.Main();
         }
         static double averageScore(double matScore, double engScore, double sciScore)//Task 1 code will go here
         {
-            return 0;//placeholder
+            double sumOfScores = matScore+engScore+sciScore;
+            double avgScore = (sumOfScores/3);
+            return avgScore;
         }
     }
     class Task2
