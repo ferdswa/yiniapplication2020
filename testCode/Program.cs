@@ -57,7 +57,7 @@ namespace testCode
         {
             //Clear console window - for aesthetic reasons only
             //declare variables
-            string studentID = "", combinedScores = "", currentScore = "";
+            string studentID = "", combinedScores = "";
             double matScore = 0, engScore = 0 , sciScore = 0, avgScore = 0;
             Console.WriteLine("Enter student's ID: ");
             studentID = Console.ReadLine();
@@ -79,7 +79,7 @@ namespace testCode
                     x.Trim();
                 }
             }
-
+            try{//stops invalid user entry from crashing program
             matScore = double.Parse(scoreArray[0]);
             engScore = double.Parse(scoreArray[1]);
             sciScore = double.Parse(scoreArray[2]);
@@ -90,6 +90,12 @@ namespace testCode
             Console.WriteLine("Press [ENTER] to go back to the task selection menu");
             Console.ReadLine();
             Program.Main();
+            }
+            catch
+            {
+                Console.WriteLine("Only enter numbers as scores please");
+                getInfoTask1();
+            }
         }
         static double averageScore(double matScore, double engScore, double sciScore)//Task 1 code will go here
         {
@@ -108,13 +114,41 @@ namespace testCode
             Console.WriteLine("Enter the student's ID");
             studentID=Console.ReadLine();
 
-            Console.WriteLine("Enter the student's Maths scores, mock first and actual second, separated by a comma");
-            string rawMaths = Console.ReadLine();
-            matScores=GetScores(rawMaths);
+            //get required info from user & try so that invalid entries don't cause crash
+            try
+            {
+                Console.WriteLine("Enter the student's Maths scores, mock first and actual second, separated by a comma");
+                string rawMaths = Console.ReadLine();
+                matScores=GetScores(rawMaths);
+                Console.WriteLine("Enter the student's English scores, mock first and actual second, separated by a comma");
+                string rawEnglish = Console.ReadLine();
+                engScores=GetScores(rawEnglish);
+                Console.WriteLine("Enter the student's Science scores, mock first and actual second, separated by a comma");
+                string rawScience = Console.ReadLine();
+                sciScores=GetScores(rawScience);
+            }
+            catch
+            {
+                Console.WriteLine("Please enter a valid set of scores");
+                getInfoTask2();
+            }
         }
         static double[] GetScores(string rawValues)
         {
-            return;
+            //Split apart input into constituent scores and remove unnecessary spaces
+            string[] splitScores = rawValues.Split(',');
+            double[] scores = new double[splitScores.Length];
+            int i = 0;
+            foreach(string x in splitScores)
+            {
+                if(x.Contains(' '))
+                {
+                    x.Trim();
+                }
+                scores[i]=double.Parse(x);
+                i++;
+            }
+            return scores;
         }
         static double calculateProgressScore()
         {
