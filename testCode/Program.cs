@@ -134,6 +134,18 @@ namespace testCode
                 progressScience = calculateProgressScore(sciScores);
                 //Calculate average progress score
                 progressAverage = calculateAvgPScore(progressMaths,progressEnglish,progressScience);
+
+                Console.Clear();
+
+                //Output student scores
+                Console.WriteLine("Student "+studentID+"'s progress scores are as follows:");
+                Console.WriteLine("Maths Mock: "+matScores[0]+"%  | Maths actual: "+matScores[1]+"%  | Maths progress: "+progressMaths);
+                Console.WriteLine("English Mock: "+engScores[0]+"%| English actual: "+engScores[1]+"%| English progress: "+progressEnglish);
+                Console.WriteLine("Science Mock: "+sciScores[0]+"%| Science actual: "+sciScores[1]+"%| Science progress: "+progressScience);
+                Console.WriteLine("Average Progress Score: "+progressAverage);
+                Console.WriteLine("Press [ENTER] to go back to the task selection menu");
+                Console.ReadLine();
+                Program.Main();
             }
             catch
             {
@@ -165,9 +177,12 @@ namespace testCode
             progressScore = (difference/10);
             return progressScore;
         }
-        static double calculateAvgPScore(double m, double e, double s)
+        static double calculateAvgPScore(double m, double e, double s)//Average progress score calculated here
         {
-            return 0;
+            double sumOfPScores, avgPScore;
+            sumOfPScores=m+e+s;//Progress scores for maths, english and science added.
+            avgPScore=(sumOfPScores/3);
+            return avgPScore;
         }
     }
 }
