@@ -30,6 +30,7 @@ namespace testCode
                             Task1.getInfoTask1();
                             return;
                         case 2:
+                            Task2.getInfoTask2();
                             return;
                         default:
                             Console.Clear();
@@ -48,10 +49,6 @@ namespace testCode
                     Main();
                     return;
             }
-        }
-        static double progressScore()//Task 2 code will go here
-        {
-            return 0;//placeholder
         }
     }
     class Task1
@@ -103,9 +100,17 @@ namespace testCode
     }
     class Task2
     {
-        static void temp()//Empty void present before I code task2
+        public static void getInfoTask2()
         {
-
+            //to get: mock & actual results for each of the three subjects.
+        }
+        static double calculateProgressScore()
+        {
+            return 0;
+        }
+        static double calculateAvgPScore()
+        {
+            return 0;
         }
     }
 }
