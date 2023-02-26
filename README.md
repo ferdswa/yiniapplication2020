@@ -1,6 +1,6 @@
 # Test for Progress Teaching role
 
-###This was made for a role I was applying to for my gap year 2021-2022
+### This was made for a role I was applying to for my gap year 2021-2022
 
 Before beginning to program, I broke the two tasks down into subroutines that each performed a unique function. This planning saved me from having to rewrite parts of my code and therefore saved time. This also stopped unneeded repetitions in the code making for a smaller and easier to read file. This process is more noticeable with Task 2 as the function that calculates each subject's progress score has to be called three times.
 
